@@ -15,6 +15,7 @@
 		19360F6D1C4F08950086E245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19360F6B1C4F08950086E245 /* LaunchScreen.storyboard */; };
 		19360F781C4F08950086E245 /* AcronymFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19360F771C4F08950086E245 /* AcronymFinderTests.m */; };
 		19360F831C4F08950086E245 /* AcronymFinderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19360F821C4F08950086E245 /* AcronymFinderUITests.m */; };
+		198385551C509366000CD2B6 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 198385541C509366000CD2B6 /* AFNetworking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 19360F591C4F08950086E245;
 			remoteInfo = AcronymFinder;
+		};
+		19360FAD1C4F0AE70086E245 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19360FA81C4F0AE60086E245 /* MBProgressHUD.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D286A7491518C70F00E13FB8;
+			remoteInfo = "MBProgressHUD Static Library";
+		};
+		19360FAF1C4F0AE70086E245 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19360FA81C4F0AE60086E245 /* MBProgressHUD.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D104D7A1ACA36CC00973364;
+			remoteInfo = "MBProgressHUD Framework";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -51,6 +66,8 @@
 		19360F7E1C4F08950086E245 /* AcronymFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcronymFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19360F821C4F08950086E245 /* AcronymFinderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AcronymFinderUITests.m; sourceTree = "<group>"; };
 		19360F841C4F08950086E245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19360FA81C4F0AE60086E245 /* MBProgressHUD.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MBProgressHUD.xcodeproj; path = "ExternalFrameworks/MBProgressHUD-master/MBProgressHUD.xcodeproj"; sourceTree = "<group>"; };
+		198385541C509366000CD2B6 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				198385551C509366000CD2B6 /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +99,8 @@
 		19360F511C4F08950086E245 = {
 			isa = PBXGroup;
 			children = (
+				198385541C509366000CD2B6 /* AFNetworking.framework */,
+				19360FA81C4F0AE60086E245 /* MBProgressHUD.xcodeproj */,
 				19360F5C1C4F08950086E245 /* AcronymFinder */,
 				19360F761C4F08950086E245 /* AcronymFinderTests */,
 				19360F811C4F08950086E245 /* AcronymFinderUITests */,
@@ -138,6 +158,15 @@
 				19360F841C4F08950086E245 /* Info.plist */,
 			);
 			path = AcronymFinderUITests;
+			sourceTree = "<group>";
+		};
+		19360FA91C4F0AE60086E245 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19360FAE1C4F0AE70086E245 /* libMBProgressHUD.a */,
+				19360FB01C4F0AE70086E245 /* MBProgressHUD.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +258,12 @@
 			mainGroup = 19360F511C4F08950086E245;
 			productRefGroup = 19360F5B1C4F08950086E245 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 19360FA91C4F0AE60086E245 /* Products */;
+					ProjectRef = 19360FA81C4F0AE60086E245 /* MBProgressHUD.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				19360F591C4F08950086E245 /* AcronymFinder */,
@@ -237,6 +272,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		19360FAE1C4F0AE70086E245 /* libMBProgressHUD.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMBProgressHUD.a;
+			remoteRef = 19360FAD1C4F0AE70086E245 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19360FB01C4F0AE70086E245 /* MBProgressHUD.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MBProgressHUD.framework;
+			remoteRef = 19360FAF1C4F0AE70086E245 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		19360F581C4F08950086E245 /* Resources */ = {
@@ -413,10 +465,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AcronymFinder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = t.AcronymFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -424,10 +483,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AcronymFinder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = t.AcronymFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -498,6 +564,7 @@
 				19360F891C4F08950086E245 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19360F8A1C4F08950086E245 /* Build configuration list for PBXNativeTarget "AcronymFinderTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +573,7 @@
 				19360F8C1C4F08950086E245 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19360F8D1C4F08950086E245 /* Build configuration list for PBXNativeTarget "AcronymFinderUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +582,7 @@
 				19360F8F1C4F08950086E245 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

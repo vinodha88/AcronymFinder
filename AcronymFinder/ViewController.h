@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDataSource,UITableViewDataSource>
 
+@property (nonatomic,strong) IBOutlet UITextField *wordText;
+
+//Methods
+-(IBAction)searchAcronymns:(id)sender;
 
 @end
 
